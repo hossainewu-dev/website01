@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Company Name | Digital Signature, PKI, eKYC and VDS</title>
+  <meta name="description" content="Digital Signature, PKI, eKYC, Face Verification and Visible Digital Seal (VDS) solutions for banks, telecom operators and government organizations in Bangladesh." />
+  <meta name="theme-color" content="#0a1a38" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.remove("no-js");</script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Top bar (replace with real details) ===== -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <p>Digital identity and document security for Bangladesh</p>
+      <p class="topbar-contact">
+        <a href="mailto:info@example.com">info@example.com</a>
+        <a href="tel:+8800000000000">+880 1XXX-XXXXXX</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Company Name, home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16 2 4 7v8c0 7.5 5 13.2 12 15 7-1.8 12-7.5 12-15V7L16 2Z" fill="currentColor"/>
+          <path d="m10.5 16 4 4 7-8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-text">Company Name</span>
+      </a>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li class="has-dropdown">
+            <a href="#solutions" class="nav-link">Solutions</a>
+            <button type="button" class="dd-toggle" aria-expanded="false" aria-controls="ddSolutions" aria-label="Show solutions menu">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <ul class="dropdown" id="ddSolutions">
+              <li><a href="#sol-signature"><strong>Digital Signature</strong><span>Sign and approve documents online</span></a></li>
+              <li><a href="#sol-ekyc"><strong>eKYC</strong><span>Onboard customers remotely</span></a></li>
+              <li><a href="#sol-face"><strong>Face Verification</strong><span>Confirm a person is who they claim</span></a></li>
+              <li><a href="#sol-pki"><strong>PKI</strong><span>Issue and manage digital certificates</span></a></li>
+              <li><a href="#sol-vds"><strong>Visible Digital Seal</strong><span>Make printed documents verifiable</span></a></li>
+            </ul>
+          </li>
+          <li><a href="#products" class="nav-link">Products</a></li>
+          <li><a href="#industries" class="nav-link">Industries</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary nav-cta">Request a demo</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-overlay" id="navOverlay" hidden></div>
+
+  <main id="main">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Building Trust in the Digital World</h1>
+          <p class="lead">
+            We help banks, telecom operators and government organizations confirm who they are
+            dealing with, sign documents online, and prove that a record has not been changed.
+          </p>
+          <div class="hero-actions">
+            <a href="#solutions" class="btn btn-primary">Explore solutions</a>
+            <a href="#contact" class="btn btn-outline-light">Request a demo</a>
+          </div>
+          <p class="hero-scope">Digital Signature, PKI, eKYC, Face Verification and Visible Digital Seal (VDS).</p>
+        </div>
+
+        <!-- Interactive illustration: what a digital seal does -->
+        <figure class="specimen" id="specimen">
+          <div class="doc" id="doc">
+            <div class="doc-head">
+              <span class="doc-title">Sample loan agreement</span>
+              <span class="doc-ref">SAMPLE-0001</span>
+            </div>
+            <p class="doc-line">Borrower: Sample Customer Ltd.</p>
+            <p class="doc-line">Approved amount: <strong id="amount">BDT 500,000</strong></p>
+            <p class="doc-line">Term: 24 months, monthly instalments.</p>
+
+            <div class="doc-foot">
+              <div class="doc-sign">
+                <svg viewBox="0 0 180 56" aria-hidden="true">
+                  <path class="sign-path" d="M6 38c10-26 18-26 22-8s12 14 20-8c4-10 12-6 14 2s10 8 22-4c6-6 12-2 16 4s14 4 26-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Signed by Sample Officer</span>
+              </div>
+              <div class="seal" id="seal" data-state="idle" aria-hidden="true">
+                <svg viewBox="0 0 96 96">
+                  <circle cx="48" cy="48" r="45" fill="none" stroke="currentColor" stroke-width="3"/>
+                  <circle cx="48" cy="48" r="38" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 3"/>
+                  <g fill="currentColor">
+                    <rect x="26" y="26" width="16" height="16" rx="2"/>
+                    <rect x="54" y="26" width="16" height="16" rx="2"/>
+                    <rect x="26" y="54" width="16" height="16" rx="2"/>
+                    <rect x="48" y="48" width="6" height="6"/><rect x="58" y="48" width="6" height="6"/>
+                    <rect x="48" y="58" width="6" height="6"/><rect x="62" y="62" width="8" height="8"/>
+                    <rect x="46" y="30" width="4" height="4"/><rect x="30" y="46" width="4" height="4"/>
+                  </g>
+                  <g fill="#fff">
+                    <rect x="30" y="30" width="8" height="8" rx="1"/>
+                    <rect x="58" y="30" width="8" height="8" rx="1"/>
+                    <rect x="30" y="58" width="8" height="8" rx="1"/>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="verify">
+            <ul class="verify-steps" id="verifySteps">
+              <li data-state="idle">Content matches the signed version</li>
+              <li data-state="idle">Signature is valid for this content</li>
+              <li data-state="idle">Seal is intact</li>
+            </ul>
+            <dl class="fingerprints">
+              <div><dt>Sealed fingerprint</dt><dd id="fpSealed">calculating</dd></div>
+              <div><dt>Current fingerprint</dt><dd id="fpCurrent">calculating</dd></div>
+            </dl>
+            <div class="verify-actions">
+              <button type="button" class="btn btn-small btn-primary" id="btnVerify">Verify document</button>
+              <button type="button" class="btn btn-small btn-outline-light" id="btnTamper">Change the amount</button>
+            </div>
+            <p class="verify-status" id="verifyStatus" role="status" aria-live="polite">Change the amount, then verify. Even a small edit breaks the seal.</p>
+          </div>
+          <figcaption>Illustration only. It runs in your browser and uses no real signature or certificate.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Solutions ===== -->
+    <section class="section" id="solutions">
+      <div class="container">
+        <header class="section-head">
+          <h2>Five building blocks for digital trust</h2>
+          <p>Use one on its own or combine them into a single workflow, from first customer contact to the signed record.</p>
+        </header>
+
+        <div class="bento">
+          <article class="tile tile-feature" id="sol-signature">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 17c2-5 3-8 5-8s1 5 3 5 2-3 4-3"/><path d="m14 5 3-2 3 3-2 3"/></svg>
+            </div>
+            <h3>Digital Signature</h3>
+            <p>Sign contracts, forms and approvals online. Each signature is tied to the signer and to the exact content, so any later change is detectable.</p>
+            <a href="#contact" class="tile-link" data-interest="Digital Signature">Discuss digital signature</a>
+          </article>
+
+          <article class="tile tile-soft" id="sol-ekyc">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><circle cx="8.5" cy="11" r="2"/><path d="M5.5 16c.5-1.7 1.7-2.5 3-2.5s2.5.8 3 2.5"/><path d="M14 10h5M14 13.5h4"/></svg>
+            </div>
+            <h3>eKYC</h3>
+            <p>Onboard customers remotely. Capture an identity document, read its data and run verification checks without a branch visit.</p>
+            <a href="#contact" class="tile-link" data-interest="eKYC">Discuss eKYC</a>
+          </article>
+
+          <article class="tile" id="sol-face">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18c.8-2.6 2.9-4 5.5-4s4.7 1.4 5.5 4"/></svg>
+            </div>
+            <h3>Face Verification</h3>
+            <p>Compare a live face capture with a reference photo, with liveness checks to help detect spoofing attempts.</p>
+            <a href="#contact" class="tile-link" data-interest="Face Verification">Discuss face verification</a>
+          </article>
+
+          <article class="tile" id="sol-pki">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9"/><path d="m16 7 3 3M14 9l2 2"/></svg>
+            </div>
+            <h3>PKI</h3>
+            <p>Issue, manage and validate the digital certificates that signatures and secure connections depend on.</p>
+            <a href="#contact" class="tile-link" data-interest="PKI">Discuss PKI</a>
+          </article>
+
+          <article class="tile" id="sol-vds">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.4 3 7.9 7.5 9.5 4.5-1.6 7.5-5.1 7.5-9.5V6L12 3Z"/><rect x="8.5" y="8.5" width="3" height="3"/><rect x="13" y="8.5" width="2.5" height="2.5"/><rect x="8.5" y="13" width="2.5" height="2.5"/><path d="M13 13h2.5v2.5"/></svg>
+            </div>
+            <h3>Visible Digital Seal (VDS)</h3>
+            <p>Add a scannable, cryptographically protected seal to a document so anyone holding the printout can check it is genuine.</p>
+            <a href="#contact" class="tile-link" data-interest="Visible Digital Seal (VDS)">Discuss VDS</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== How it fits together (a real sequence) ===== -->
+    <section class="section section-mist" id="how-it-works">
+      <div class="container">
+        <header class="section-head">
+          <h2>How the pieces work together</h2>
+          <p>A typical flow for a service that needs verified people and trustworthy documents.</p>
+        </header>
+
+        <ol class="steps">
+          <li>
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3>Identify the person</h3>
+            <p>eKYC and face verification confirm who is applying.</p>
+          </li>
+          <li>
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3>Issue credentials</h3>
+            <p>PKI provides the certificate that binds an identity to a signing key.</p>
+          </li>
+          <li>
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3>Sign and seal</h3>
+            <p>Digital signatures approve the record. A VDS makes the printout checkable.</p>
+          </li>
+          <li>
+            <span class="step-num" aria-hidden="true">4</span>
+            <h3>Verify anywhere</h3>
+            <p>Anyone can confirm the document is authentic and unchanged.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Products ===== -->
+    <section class="section" id="products">
+      <div class="container products-grid">
+        <header class="section-head section-head-left">
+          <h2>Products</h2>
+          <p>Adopt one product or the full set. Names and descriptions below are placeholders. Replace them with your actual product portfolio.</p>
+        </header>
+
+        <dl class="product-list">
+          <div class="product">
+            <dt>Signing Platform</dt>
+            <dd>Web portal and API for uploading documents, routing them to signers, and verifying the result.</dd>
+          </div>
+          <div class="product">
+            <dt>Certificate Management</dt>
+            <dd>Request, issue, renew, suspend and revoke certificates from one console.</dd>
+          </div>
+          <div class="product">
+            <dt>eKYC and Face Verification Suite</dt>
+            <dd>Mobile and web SDKs plus APIs for ID capture, face matching and liveness checks.</dd>
+          </div>
+          <div class="product">
+            <dt>VDS Issuer and Verifier</dt>
+            <dd>Generate seals for documents, then let recipients check them with a scanner or web page.</dd>
+          </div>
+          <div class="product">
+            <dt>Integration Toolkit</dt>
+            <dd>REST APIs, documentation and sample code for core banking, CRM and e-government systems.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== Industries (tabs) ===== -->
+    <section class="section section-mist" id="industries">
+      <div class="container">
+        <header class="section-head">
+          <h2>Built around how each sector works</h2>
+          <p>Processes and regulatory requirements differ by sector. We configure the solution around yours.</p>
+        </header>
+
+        <div class="tabs">
+          <div class="tab-list" role="tablist" aria-label="Industries">
+            <button type="button" role="tab" id="tab-banks" aria-controls="panel-banks" aria-selected="true">Banks</button>
+            <button type="button" role="tab" id="tab-telecom" aria-controls="panel-telecom" aria-selected="false" tabindex="-1">Telecom operators</button>
+            <button type="button" role="tab" id="tab-government" aria-controls="panel-government" aria-selected="false" tabindex="-1">Government</button>
+          </div>
+
+          <div class="tab-panel" id="panel-banks" role="tabpanel" aria-labelledby="tab-banks">
+            <div class="panel-main">
+              <h3>Banks and financial institutions</h3>
+              <p>Open accounts and approve loans without asking customers to visit a branch, while keeping a verifiable record of every step.</p>
+              <ul class="checks">
+                <li>Remote account opening with eKYC</li>
+                <li>Face verification for higher-risk transactions</li>
+                <li>Digitally signed loan and account documents</li>
+                <li>VDS on statements and certificates</li>
+              </ul>
+            </div>
+            <aside class="panel-flow" aria-label="Example flow for banks">
+              <h4>Example: remote account opening</h4>
+              <ol>
+                <li>Customer captures an ID document and a live photo.</li>
+                <li>The bank checks the data and the face match.</li>
+                <li>Customer signs the account agreement online.</li>
+                <li>The signed agreement is stored and can be verified later.</li>
+              </ol>
+            </aside>
+          </div>
+
+          <div class="tab-panel" id="panel-telecom" role="tabpanel" aria-labelledby="tab-telecom">
+            <div class="panel-main">
+              <h3>Telecom operators</h3>
+              <p>Register subscribers accurately and reduce impersonation, from the retail point of sale to self-service channels.</p>
+              <ul class="checks">
+                <li>SIM registration and subscriber onboarding</li>
+                <li>Face-based identity checks at activation</li>
+                <li>Paperless customer agreements</li>
+                <li>Fewer fraudulent registrations</li>
+              </ul>
+            </div>
+            <aside class="panel-flow" aria-label="Example flow for telecom operators">
+              <h4>Example: subscriber registration</h4>
+              <ol>
+                <li>Agent or customer scans the ID document.</li>
+                <li>The live face is matched to the document photo.</li>
+                <li>Subscriber signs the agreement on screen.</li>
+                <li>The SIM is activated and the record is kept.</li>
+              </ol>
+            </aside>
+          </div>
+
+          <div class="tab-panel" id="panel-government" role="tabpanel" aria-labelledby="tab-government">
+            <div class="panel-main">
+              <h3>Government organizations</h3>
+              <p>Move approvals and citizen services online, and let anyone check that an official document is genuine.</p>
+              <ul class="checks">
+                <li>Digitally signed approvals and notices</li>
+                <li>Certificates and licenses that can be verified with VDS</li>
+                <li>Citizen identity checks for online services</li>
+                <li>PKI foundations for secure data exchange</li>
+              </ul>
+            </div>
+            <aside class="panel-flow" aria-label="Example flow for government organizations">
+              <h4>Example: issuing a certificate</h4>
+              <ol>
+                <li>An officer approves the application.</li>
+                <li>The certificate is digitally signed.</li>
+                <li>A VDS is added to the printable copy.</li>
+                <li>A recipient scans the seal to confirm it is genuine.</li>
+              </ol>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <h2>A Bangladeshi technology company focused on digital trust</h2>
+          <p>
+            We design and build digital identity and document security solutions for organizations that
+            need to know who they are dealing with, and need to prove that their records are genuine.
+          </p>
+          <p>
+            Our focus is Digital Signature, PKI, eKYC, Face Verification and Visible Digital Seal. We work with
+            clients from requirements and design through integration and support.
+          </p>
+          <p class="placeholder-note">Placeholder text. Add your company history, mission and team here.</p>
+        </div>
+
+        <dl class="principles">
+          <div>
+            <dt>Security comes first</dt>
+            <dd>Cryptography and careful design sit at the core of every product.</dd>
+          </div>
+          <div>
+            <dt>Built to integrate</dt>
+            <dd>Open APIs and clear documentation so solutions fit existing systems.</dd>
+          </div>
+          <div>
+            <dt>Local context</dt>
+            <dd>Shaped around the needs of Bangladeshi organizations and the people they serve.</dd>
+          </div>
+          <div>
+            <dt>Hands-on support</dt>
+            <dd>Help from planning through rollout and beyond.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section section-navy" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h2>Tell us about your project</h2>
+          <p>Share what you need to verify, sign or protect. We will reply with the next steps. Replace the details below with your own.</p>
+
+          <ul class="contact-list">
+            <li>
+              <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+              <div><strong>Address</strong><span>[Office address], Dhaka, Bangladesh</span></div>
+            </li>
+            <li>
+              <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span>
+              <div><strong>Email</strong><span>info@example.com</span></div>
+            </li>
+            <li>
+              <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span>
+              <div><strong>Phone</strong><span>+880 1XXX-XXXXXX</span></div>
+            </li>
+            <li>
+              <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <div><strong>Office hours</strong><span>[Days and hours]</span></div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <h3>Contact form</h3>
+          <p class="form-intro">Fields marked with * are required.</p>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Full name *</label>
+              <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="err-name" />
+              <small class="error" id="err-name"></small>
+            </div>
+            <div class="field">
+              <label for="email">Work email *</label>
+              <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="err-email" />
+              <small class="error" id="err-email"></small>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="err-phone" />
+              <small class="error" id="err-phone"></small>
+            </div>
+            <div class="field">
+              <label for="organization">Organization *</label>
+              <input type="text" id="organization" name="organization" autocomplete="organization" required aria-describedby="err-organization" />
+              <small class="error" id="err-organization"></small>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="sector">Sector</label>
+            <select id="sector" name="sector">
+              <option value="">Choose one</option>
+              <option>Bank or financial institution</option>
+              <option>Telecom operator</option>
+              <option>Government organization</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <fieldset class="field chips">
+            <legend>Solutions you are interested in</legend>
+            <label class="chip"><input type="checkbox" name="interest" value="Digital Signature" /><span>Digital Signature</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="eKYC" /><span>eKYC</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="Face Verification" /><span>Face Verification</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="PKI" /><span>PKI</span></label>
+            <label class="chip"><input type="checkbox" name="interest" value="Visible Digital Seal (VDS)" /><span>VDS</span></label>
+          </fieldset>
+
+          <div class="field">
+            <label for="message">How can we help? *</label>
+            <textarea id="message" name="message" rows="5" maxlength="1000" required aria-describedby="err-message"></textarea>
+            <div class="field-meta">
+              <small class="error" id="err-message"></small>
+              <small class="counter" id="msgCount">0 / 1000</small>
+            </div>
+          </div>
+
+          <!-- Spam trap: real visitors never see or fill this -->
+          <div class="hp" aria-hidden="true">
+            <label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+          </div>
+
+          <div class="field">
+            <label class="check">
+              <input type="checkbox" id="consent" name="consent" required aria-describedby="err-consent" />
+              <span>I agree that Company Name may contact me about this request. (Link your privacy policy here.)</span>
+            </label>
+            <small class="error" id="err-consent"></small>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+            <span class="btn-label">Send message</span>
+          </button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand brand-light">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16 2 4 7v8c0 7.5 5 13.2 12 15 7-1.8 12-7.5 12-15V7L16 2Z" fill="currentColor"/>
+            <path d="m10.5 16 4 4 7-8" fill="none" stroke="#0a1a38" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="brand-text">Company Name</span>
+        </a>
+        <p>Digital Signature, PKI, eKYC, Face Verification and Visible Digital Seal for banks, telecom operators and government organizations.</p>
+      </div>
+
+      <nav aria-label="Footer solutions">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="#sol-signature">Digital Signature</a></li>
+          <li><a href="#sol-ekyc">eKYC</a></li>
+          <li><a href="#sol-face">Face Verification</a></li>
+          <li><a href="#sol-pki">PKI</a></li>
+          <li><a href="#sol-vds">Visible Digital Seal</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Footer company">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>[Office address], Dhaka</li>
+          <li><a href="mailto:info@example.com">info@example.com</a></li>
+          <li><a href="tel:+8800000000000">+880 1XXX-XXXXXX</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2026</span> Company Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
